@@ -1,6 +1,6 @@
-User.destroy_all
 Participation.destroy_all
 Challenge.destroy_all
+User.destroy_all
 
 puts "Creating some users and challenges..."
 kevin = User.new(email: "kevin@trashtag.com", first_name: "kevin", last_name: "Stark", description: "43 ans, adore le vélo 🚲 , Bordeaux", password: "azerty")
@@ -28,3 +28,5 @@ tarnos.save
 guéthary = Challenge.new(title: 'Challenge pour ce weekend', place: 'Guéthary', date:"2020-01-05 17:30:00", user: kevin)
 guéthary.user = kevin
 guéthary.save
+
+puts "Done ! Let's test your app..."
