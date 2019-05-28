@@ -17,9 +17,14 @@ tristan.save
 
 
 lacanau = Challenge.new(title: 'Voici le premier challenge', place: 'Lacanau', date:"2019-07-07 07:07:07")
-
-arcachon = Challenge.new(title: 'Voici mon challenge', place: 'Arcachon', date:"2019-10-30 10:00:01")
-
-tarnos = Challenge.new(title: 'Rejoingnez moi pour ce challenge', place: 'Tarnos', date:"2019-11-22 14:06:00")
-
-guéthary = Challenge.new(title: 'Challenge pour ce weekend', place: 'Guéthary', date:"2020-01-05 17:30:00")
+lacanau.user = justine
+lacanau.save
+arcachon = Challenge.new(title: 'Voici mon challenge', place: 'Arcachon', date:"2019-10-30 10:00:01", user: loic)
+arcachon.user = loic
+arcachon.save
+tarnos = Challenge.new(title: 'Rejoingnez moi pour ce challenge', place: 'Tarnos', date:"2019-11-22 14:06:00", user: tristan)
+tarnos.user = tristan
+tarnos.save
+guéthary = Challenge.new(title: 'Challenge pour ce weekend', place: 'Guéthary', date:"2020-01-05 17:30:00", user: kevin)
+guéthary.user = kevin
+guéthary.save
