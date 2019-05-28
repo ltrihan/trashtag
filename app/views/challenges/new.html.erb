@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Create your challenge</h1>
+
+  <%= simple_form_for @challenge do |f| %>
+    <%= f.input :title, placeholder: "Enter challenge title" %>
+    <%= f.input :place, placeholder: "Enter challenge address" %>
+    <div class="input-append date form_datetime">
+        <%= f.input :date %>
+        <span class="add-on"><i class="icon-th"></i></span>
+    </div>
+
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+
+</div>
+
+<!-- <script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+</script> -->
