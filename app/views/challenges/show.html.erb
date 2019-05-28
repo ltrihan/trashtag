@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h1>Challenge details</h1>
+  <p><%= @challenge.date %></p>
+  <p><%= @challenge.title %></p>
+  <p><%= @challenge.place %></p>
+  <p>Nombre de participations : <%= @challenge.participations.count %></p>
+  <%= link_to "Back to challenges", challenges_path, class: 'btn btn-success' %>
+
+</div>
