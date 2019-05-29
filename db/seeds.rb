@@ -17,19 +17,19 @@ tristan = User.new(email: "tristan@trashtag.pro", first_name: "tristan", last_na
 tristan.save
 
 
-lacanau = Challenge.new(title: 'Voici le premier challenge', place: 'Lacanau', date:"2019-07-07 07:07:07")
+lacanau = Challenge.new(title: "Justine's challenge", place: 'Lacanau', date:"2019-07-07 07:07:07")
 lacanau.user = justine
 lacanau.save
 
-arcachon = Challenge.new(title: 'Voici mon challenge', place: 'Arcachon', date:"2019-10-30 10:00:01", user: loic)
+arcachon = Challenge.new(title: "Loïc's challenge", place: 'Arcachon', date:"2019-10-30 10:00:01", user: loic)
 arcachon.user = loic
 arcachon.save
 
-tarnos = Challenge.new(title: 'Rejoingnez moi pour ce challenge', place: 'Tarnos', date:"2019-11-22 14:06:00", user: tristan)
+tarnos = Challenge.new(title: "Tristan's challenge", place: 'Tarnos', date:"2019-11-22 14:06:00", user: tristan)
 tarnos.user = tristan
 tarnos.save
 
-guéthary = Challenge.new(title: 'Challenge pour ce weekend', place: 'Guéthary', date:"2020-01-05 17:30:00", user: kevin)
+guéthary = Challenge.new(title: "Kévin's challenge", place: 'Guéthary', date:"2020-01-05 17:30:00", user: kevin)
 guéthary.user = kevin
 guéthary.save
 
