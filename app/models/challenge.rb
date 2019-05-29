@@ -3,6 +3,6 @@ class Challenge < ApplicationRecord
   has_many :participations
 
   has_many :users, through: :participations
-
+  mount_uploader :photo, PhotoUploader
   # validates :title, :place, :date, presence: true
 end

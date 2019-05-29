@@ -31,6 +31,6 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:title, :place, :date)
+    params.require(:challenge).permit(:title, :place, :date, :photo)
   end
 end
