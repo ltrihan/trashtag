@@ -1,6 +1,13 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.where.not(latitude: nil, longitude: nil)
+
+    @markers = @challenges.map do |challenge|
+      {
+        lat: challenge.latitude,
+        lng: challenge.longitude
+      }
+    end
   end
 
   def show

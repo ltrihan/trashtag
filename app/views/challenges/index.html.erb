@@ -1,6 +1,14 @@
-<div class="container">
+<h1 class="text-center">List of challenges</h1>
 
-  <h1 class="text-center">List of challenges</h1>
+<div
+id="map"
+style="width: 100%;
+height: 35vh;"
+data-markers="<%= @markers.to_json %>"
+data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+<div class="container">
 
   <ul>
     <% @challenges.each do |challenge| %>
