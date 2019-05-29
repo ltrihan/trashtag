@@ -16,7 +16,6 @@ class ChallengesController < ApplicationController
     @user = current_user
     @challenge.user = @user
     if @challenge.save
-      Participation.create!(user: @user, challenge: @challenge)
       redirect_to challenge_path(@challenge)
     else
       render 'new'
