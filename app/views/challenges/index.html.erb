@@ -4,14 +4,17 @@
 
   <ul>
     <% @challenges.each do |challenge| %>
-      <li><%= link_to challenge.title, challenge_path(challenge) %></li>
        <div class="card">
-        <%= cl_image_tag challenge.photo, height: 300, width: 400, crop: :fill %>
+        <li><%= link_to challenge.title, challenge_path(challenge) %></li>
+        <%= cl_image_tag challenge.photo, height: 100, width: 100, crop: :fill %>
         <div class="container">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
+          <h4><b>Title</b></h4>
+          <button type="button" class="btn btn-primary">More details</button> <!-- alignez a droite -->
         </div>
       </div>
     <% end %>
   </ul>
 </div>
+
+
+
