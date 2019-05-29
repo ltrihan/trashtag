@@ -1,14 +1,14 @@
 <div class="container">
 
-  <h1>Welcome on <%= user.first_name %> <%= user.last_name %> profile !</h1>
+  <h1>Welcome on <%= @user.first_name %> <%= @user.last_name %> profile !</h1>
 
-  <p><%= user.description %></p>
+  <p><%= @user.description %></p>
 
   <h2>My participations</h2>
 
   <ul>
-    <% user.participations.each do |participation| %>
-      <li><%= link_to participation.challenge.title, challenge_path(@challenge) %></li>
+    <% @user.participations.each do |participation| %>
+      <li><%= link_to participation.challenge.title, challenge_path(participation.challenge) %></li>
     <% end %>
   </ul>
 
@@ -16,8 +16,8 @@
   <h2>My challenges</h2>
 
   <ul>
-    <% user.challenges.each do |challenge| %>
-      <li><%= link_to challenge.title, challenge_path(@challenge) %></li>
+    <% @user.challenges.each do |challenge| %>
+      <li><%= link_to challenge.title, challenge_path(challenge) %></li>
     <% end %>
   </ul>
 
