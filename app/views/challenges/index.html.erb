@@ -1,24 +1,23 @@
 <h1 class="text-center">List of challenges</h1>
 
-<div
-id="map"
-style="width: 100%;
-height: 35vh;"
-data-markers="<%= @markers.to_json %>"
-data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+<div>
+  <div
+  id="map"
+  style="width: 100%;
+  height: 35vh;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
 
 <div class="container">
-
   <ul>
     <% @challenges.each do |challenge| %>
        <div class="card">
         <li><%= link_to challenge.title, challenge_path(challenge) %></li>
         <%= cl_image_tag challenge.photo, height: 100, width: 100, crop: :fill %>
-        <div class="container">
           <h4><b>Title</b></h4>
-          <button type="button" class="btn btn-primary">More details</button> <!-- alignez a droite -->
-        </div>
+          <button type="button" class="btn btn-primary">More details</button>
       </div>
     <% end %>
   </ul>
