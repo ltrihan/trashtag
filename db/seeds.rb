@@ -22,17 +22,17 @@ lacanau.remote_photo_url = 'http://rue89bordeaux.com/wp-content/uploads/2014/08/
 lacanau.user = justine
 lacanau.save
 
-arcachon = Challenge.new(title: "Loïc's challenge", place: 'Arcachon', date:"2019-10-30 10:00:01", user: loic)
+arcachon = Challenge.new(title: "Loïc's challenge", place: 'Arcachon', date:"2019-10-30 10:00:01")
 arcachon.remote_photo_url = 'https://images.sudouest.fr/2018/10/25/5bd1fff766a4bd825e6a491f/widescreen/1000x500/des-galettes-sont-presentes-sur-49-plages-du-departement.jpg?v1'
 arcachon.user = loic
 arcachon.save
 
-tarnos = Challenge.new(title: "Tristan's challenge", place: 'Tarnos', date:"2019-11-22 14:06:00", user: tristan)
+tarnos = Challenge.new(title: "Tristan's challenge", place: 'Tarnos', date:"2019-11-22 14:06:00")
 tarnos.remote_photo_url = 'https://www.francetvinfo.fr/image/750buu13x-2e9d/1200/450/3528877.jpg'
 tarnos.user = tristan
 tarnos.save
 
-guéthary = Challenge.new(title: "Kévin's challenge", place: 'Guéthary', date:"2020-01-05 17:30:00", user: kevin)
+guéthary = Challenge.new(title: "Kévin's challenge", place: 'Guéthary', date:"2020-01-05 17:30:00")
 guéthary.remote_photo_url = 'http://www.amisdelaterre40.fr/spip/IMG/jpg/Contis_-_enfant_sur_la_plage.jpg'
 guéthary.user = kevin
 guéthary.save
