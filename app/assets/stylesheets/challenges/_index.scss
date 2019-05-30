@@ -1,0 +1,9 @@
+.card-description {
+  height: 40px;
+}
+
+.card-description p {
+ text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+}
