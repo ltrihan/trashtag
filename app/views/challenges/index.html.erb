@@ -11,17 +11,25 @@
 </div>
 
 <div class="container">
-  <ul>
-    <% @challenges.each do |challenge| %>
-       <div class="card">
-        <li><%= link_to challenge.title, challenge_path(challenge) %></li>
-        <%= cl_image_tag challenge.photo, height: 100, width: 100, crop: :fill %>
-          <h4><b>Title</b></h4>
-          <button type="button" class="btn btn-primary">More details</button>
+  <% @challenges.each do |challenge| %>
+    <div class="row">
+      <div class="card col-md-12 p-3">
+        <div class="row ">
+          <div class="col-md-4">
+           <!-- <%= link_to challenge.title, challenge_path(challenge) %>-->
+           <%= cl_image_tag challenge.photo, height: 180, width: 340, crop: :fill %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-block">
+              <h6 class="card-title">Card Title</h6>
+              <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
       </div>
-    <% end %>
-  </ul>
+    </div>
+  <% end %>
 </div>
-
 
 
