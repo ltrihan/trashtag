@@ -17,7 +17,7 @@ tristan = User.new(email: "tristan@trashtag.pro", first_name: "tristan", last_na
 tristan.save
 
 
-lacanau = Challenge.new(title: "Justine's challenge", place: 'Lacanau', date:"2019-07-07 07:07:07")
+lacanau = Challenge.new(title: "Justine's challenge", place: 'Lacanau', date:"2019-07-07 07:07:07", user: justine)
 lacanau.user = justine
 lacanau.save
 
