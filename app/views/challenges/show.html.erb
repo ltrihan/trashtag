@@ -6,6 +6,11 @@
   <p><%= @challenge.title %></p>
   <p><%= @challenge.place %></p>
   <p>Nombre de participations : <%= @challenge.participations.count %></p>
-  <%= link_to "Back to challenges", challenges_path, class: 'btn btn-success' %>
 
+  <div class="text-center">
+  <% if current_user == @challenge.user %>
+  <%= link_to "Delete this challenge", challenges_path, class: 'btn btn-success', method: :delete %>
+  <% end %>
+
+  </div>
 </div>
