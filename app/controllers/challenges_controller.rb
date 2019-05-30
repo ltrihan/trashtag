@@ -1,11 +1,14 @@
 class ChallengesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @challenges = Challenge.where.not(latitude: nil, longitude: nil)
 
     @markers = @challenges.map do |challenge|
       {
         lat: challenge.latitude,
-        lng: challenge.longitude
+        lng: challenge.longitude,
+        image_url: helpers.asset_url('garbage.png')
       }
     end
   end
