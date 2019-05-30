@@ -7,7 +7,8 @@ class ChallengesController < ApplicationController
     @markers = @challenges.map do |challenge|
       {
         lat: challenge.latitude,
-        lng: challenge.longitude
+        lng: challenge.longitude,
+        image_url: helpers.asset_url('garbage.png')
       }
     end
   end
