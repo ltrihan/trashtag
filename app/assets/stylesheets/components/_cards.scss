@@ -2,10 +2,9 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-top: 10px
+  margin-bottom: 10px
 }
 
 .card-challenge img {
@@ -25,10 +24,14 @@
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   margin-top: 8px;
 }
 
 .card-challenge .card-challenge-infos {
   padding: 16px;
+}
+
+.cards-challenges-list {
+  margin-top: 10px;
 }
