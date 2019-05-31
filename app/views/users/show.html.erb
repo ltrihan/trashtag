@@ -3,6 +3,7 @@
   <h1>Welcome on <%= @user.first_name %> <%= @user.last_name %> profile !</h1>
 
   <p><%= @user.description %></p>
+  <%= cl_image_tag(@user.photo, :size => '250x250') %>
 
   <h2>My participations</h2>
 

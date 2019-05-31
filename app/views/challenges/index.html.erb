@@ -1,4 +1,14 @@
-<h1 class="text-center">List of challenges</h1>
+<!-- <h1 class="text-center">Challenge yourself</h1>
+ -->
+
+<%= simple_form_for :search, url: challenges_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Let's challenge yourself !" />
+    <button name="button" type="submit" class="btn btn-challenge">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
 
 <div>
   <div
@@ -11,19 +21,16 @@
 </div>
 
 <div class="container">
-  <ul>
-    <% @challenges.each do |challenge| %>
-       <div class="card">
-        <li><%= link_to challenge.title, challenge_path(challenge) %></li>
-        <%= cl_image_tag challenge.photo, height: 100, width: 100, crop: :fill %>
-          <h4><b>Title</b></h4>
-          <button type="button" class="btn btn-primary">More details</button>
+  <% @challenges.each do |challenge| %>
+
+    <div class="card-challenge">
+      <%= cl_image_tag challenge.photo, height: 100, width: 150, crop: :fill %>
+      <div class="card-challenge-infos">
+        <h2><%= challenge.title %></h2>
+        <p>Challenge description with <strong>relevant info</strong> only.</p>
+        <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
       </div>
-    <% end %>
-  </ul>
+    </div>
+
+  <% end %>
 </div>
-
-  
-
-
-
