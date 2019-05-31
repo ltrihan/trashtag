@@ -1,42 +1,40 @@
-<div class="container-fluid">
-  <div class="navbar fixed-bottom navbar-expand-sm navbar-light navbar-lewagon">
-    <ul class="navbar-nav w-100 d-flex flex-row justify-content-around" >
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to root_path, class: "nav-link" do %>
-            <i class="fas fa-home fa-1x" ></i>
-          <% end %>
-        </li>
-
-        <li class="nav-item">
-        <%= link_to challenges_path, class: "nav-link" do %>
-          <i class="fas fa-tasks"></i>
+<div class="navbar fixed-bottom navbar-expand-sm navbar-light navbar-lewagon">
+  <ul class="navbar-nav w-100 d-flex flex-row justify-content-around" >
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fas fa-home fa-1x" ></i>
         <% end %>
-        </li>
+      </li>
 
-         <li class="nav-item">
-          <%= link_to new_challenge_path, class: "nav-link" do %>
-            <i class="fas fa-camera"></i></i>
-          <% end %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "#", class: "nav-link" do %>
-            <i class="fas fa-sort-amount-up"></i></i>
-          <% end %>
-        </li>
-
-        <li class="nav-avatar">
-          <%= link_to user_path(current_user), class: "nav-link" do %>
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="30">
-          <% end %>
-        </li>
-
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item">
+      <%= link_to challenges_path, class: "nav-link" do %>
+        <i class="fas fa-tasks"></i>
       <% end %>
-    </ul>
-  </div>
+      </li>
+
+       <li class="nav-item">
+        <%= link_to new_challenge_path, class: "nav-link" do %>
+          <i class="fas fa-camera"></i></i>
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "#", class: "nav-link" do %>
+          <i class="fas fa-sort-amount-up"></i></i>
+        <% end %>
+      </li>
+
+      <li class="nav-avatar">
+        <%= link_to user_path(current_user), class: "nav-link" do %>
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="30">
+        <% end %>
+      </li>
+
+    <% else %>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </li>
+    <% end %>
+  </ul>
 </div>
