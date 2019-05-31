@@ -1,17 +1,19 @@
-<div class="container">
-  <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %>
+<div class="challenge-details" style="
+    height: 92%">
+  <div class="text-center" >
+  <%= cl_image_tag @challenge.photo, height: 300, width: 300, crop: :fill %>
 
-  <h1>Challenge details</h1>
-  <p><%= @challenge.date %></p>
-  <p><%= @challenge.title %></p>
-  <p><%= @challenge.place %></p>
-  <p>Nombre de participations : <%= @challenge.participations.count %></p>
+  <h2><%= @challenge.title %></h2>
+  <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
+  <p><i class="far fa-calendar-check"></i> <%= @challenge.date %></p>
+  <p><i class="fas fa-users"></i> Nombre de participations : <%= @challenge.participations.count %></p>
 
-  <div class="text-center">
   <% if current_user == @challenge.user %>
   <%= link_to "Delete this challenge", challenges_path, class: 'btn btn-success', method: :delete %>
   <% end %>
+  <%= link_to "Participate", challenge_participations_path(@challenge), method: :post %>
+
 
   </div>
 </div>
- 
+

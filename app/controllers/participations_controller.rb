@@ -2,8 +2,8 @@ class ParticipationsController < ApplicationController
 
     def create
         @user = current_user
-        @challenge = challenge.find(params[:challenge_id])
-        @participation = participation.new
+        @challenge = Challenge.find(params[:challenge_id])
+        @participation = Participation.new
         @participation.challenge = @challenge
         @participation.user = @user
         if @participation.save
