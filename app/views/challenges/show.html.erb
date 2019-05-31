@@ -9,10 +9,9 @@
   <p><i class="fas fa-users"></i> Nombre de participations : <%= @challenge.participations.count %></p>
 
   <% if current_user == @challenge.user %>
-  <%= link_to "Delete this challenge", challenges_path, class: 'btn btn-success', method: :delete %>
+    <%= link_to "Delete this challenge", challenge_path(@challenge), class: 'btn btn-success', method: :delete %>
   <% end %>
   <%= link_to "Participate", challenge_participations_path(@challenge), method: :post %>
-
 
   </div>
 </div>
