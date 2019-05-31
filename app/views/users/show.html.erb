@@ -1,12 +1,12 @@
 <div class="text-center">
   <div class="users-show-photo">
-    <%= cl_image_tag(@user.photo, :size => '120x120', class: 'rounded-circle') %>
+    <%= cl_image_tag(@user.photo, :size => '100x100', class: 'rounded-circle') %>
   </div>
   <h4 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h4>
   <p><%= @user.description %></p>
 </div>
 
-<h4 class="text-center">My challenges</h4>
+<h4 class="my-challenges text-center">My challenges</h4>
 
 <div class="cards-challenges-list">
   <% @user.challenges.each do |challenge| %>
@@ -21,7 +21,8 @@
   <% end %>
 </div>
 
-<h4 class="text-center">My participations</h4>
+
+<h4 class="my-participations text-center">My participations</h4>
 
 <div class="cards-challenges-list">
   <% @user.participations.each do |participation| %>

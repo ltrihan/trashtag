@@ -4,10 +4,10 @@ User.destroy_all
 
 puts "Creating some users, challenges and participations..."
 users_data = [
-  { email: "loic@trashtag.pro", first_name: "loic", last_name: "Lead", description: "25 ans, aime sa petite Caroline (tortue), Marmande", password: "azerty", photo: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/yoosabmpn7d2y5vvnmwb.jpg' },
-  { email: "kevin@trashtag.pro", first_name: "kevin", last_name: "Stark", description: "43 ans, adore le vélo 🚲 , Bordeaux", password: "azerty", photo: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/gauj4awcfxzhwwkztplr.jpg' },
-  { email: "justine@trashtag.pro", first_name: "justine", last_name: "Jackson", description: "28 ans, en couple, Bordeaux", password: "azerty", photo: 'https://avatars0.githubusercontent.com/u/48020643?v=4' },
-  { email: "tristan@trashtag.pro", first_name: "tristan", last_name: "Bouteille", description: "32 ans, aime les sushis 🍣 Bordeaux", password: "azerty", photo: 'https://avatars0.githubusercontent.com/u/48752013?v=4' }
+  { email: "loic@trashtag.pro", first_name: "Loïc", last_name: "Lead", description: "25 ans, aime sa petite Caroline (tortue), Marmande", password: "azerty", photo: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/yoosabmpn7d2y5vvnmwb.jpg' },
+  { email: "kevin@trashtag.pro", first_name: "Kevin", last_name: "Stark", description: "43 ans, adore le vélo 🚲 , Bordeaux", password: "azerty", photo: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/gauj4awcfxzhwwkztplr.jpg' },
+  { email: "justine@trashtag.pro", first_name: "Justine", last_name: "Jackson", description: "28 ans, en couple, Bordeaux", password: "azerty", photo: 'https://avatars0.githubusercontent.com/u/48020643?v=4' },
+  { email: "tristan@trashtag.pro", first_name: "Tristan", last_name: "Bouteille", description: "32 ans, aime les sushis 🍣 Bordeaux", password: "azerty", photo: 'https://www.demotivateur.fr/images-buzz/8984/16124365_1117534098374780_5466006995590971392_n.jpg' }
 ]
 User.create!(users_data)
 
