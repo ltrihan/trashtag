@@ -27,7 +27,7 @@
 
       <li class="nav-avatar">
         <%= link_to user_path(current_user), class: "nav-link" do %>
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="30">
+          <%= cl_image_tag current_user.photo, class: "rounded-circle z-depth-0", height: 30 %>
         <% end %>
       </li>
 
