@@ -1,25 +1,40 @@
-<div class="container">
-
-  <h1>Welcome on <%= @user.first_name %> <%= @user.last_name %> profile !</h1>
-
+<div class="text-center">
+  <div class="users-show-photo">
+    <%= cl_image_tag(@user.photo, :size => '120x120', class: 'rounded-circle') %>
+  </div>
+  <h4 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h4>
   <p><%= @user.description %></p>
-  <%= cl_image_tag(@user.photo, :size => '250x250') %>
-
-  <h2>My participations</h2>
-
-  <ul>
-    <% @user.participations.each do |participation| %>
-      <li><%= link_to participation.challenge.title, challenge_path(participation.challenge) %></li>
-    <% end %>
-  </ul>
-
-
-  <h2>My challenges</h2>
-
-  <ul>
-    <% @user.challenges.each do |challenge| %>
-      <li><%= link_to challenge.title, challenge_path(challenge) %></li>
-    <% end %>
-  </ul>
-
 </div>
+
+<h4 class="text-center">My challenges</h4>
+
+<div class="cards-challenges-list">
+  <% @user.challenges.each do |challenge| %>
+    <div class="card-challenge">
+      <%= cl_image_tag challenge.photo, height: 100, width: 150, crop: :fill %>
+      <div class="card-challenge-infos">
+        <h2><%= challenge.title %></h2>
+        <p>Challenge description with <strong>relevant info</strong> only.</p>
+        <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h4 class="text-center">My participations</h4>
+
+<div class="cards-challenges-list">
+  <% @user.participations.each do |participation| %>
+
+  <div class="card-challenge">
+      <%= cl_image_tag participation.challenge.photo, height: 100, width: 150, crop: :fill %>
+      <div class="card-challenge-infos">
+        <h2><%= participation.challenge.title %></h2>
+        <p>Challenge description with <strong>relevant info</strong> only.</p>
+        <%= link_to "More details", challenge_path(participation.challenge), class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
