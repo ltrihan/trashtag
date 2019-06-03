@@ -1,9 +1,7 @@
 // ========= CHALLENGE SHOW (DETAILS) ===========
 
 .challenge-details {
-  overflow: hidden;
   background: white;
-  height: 100vh;
   text-align: center;
 }
 
@@ -14,34 +12,31 @@
 }
 
 #challenge-organizer {
-  position: absolute;
+  position: relative;
 }
 
 .challenge-details-user {
   position: absolute;
   width: 100px;
   top: -50px;
+  left: calc(50% - 50px);
 }
 
 .challenge-details h2 {
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
+
 }
 
 .challenge-details p {
   font-size: 16px;
   opacity: .7;
-  margin: 0;
+
 }
 
-.challenge-details .challenge-details-infos {
-  padding: 16px;
-  position: relative;
-}
-
-.challenge-details-infos {
-  display: flex;
+.texts-infos {
   flex-direction: column;
-  justify-content: space-between;
+  margin-bottom: 85px;
+  height: 100vh;
 }
+

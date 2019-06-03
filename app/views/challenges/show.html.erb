@@ -1,22 +1,32 @@
 <div class="challenge-details">
   <%= cl_image_tag @challenge.photo, height: 300, width: 300, crop: :fill %>
-  <div id="challenge-organizer"><%= cl_image_tag @challenge.user.photo, class: "challenge-details-user avatar-bordered" %></div>
-  <div class="challenge-details-infos">
-    <div>
-      <h2><%= @challenge.title %></h2>
-      <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
-      <p><i class="far fa-calendar-check"></i> <%= @challenge.date %></p>
-    </div>
-    <h2 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h2>
-  </div>
 
-
-  <div class="text-center">
-    <% if current_user == @challenge.user %>
-      <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
-        <i class="fas fa-trash-alt"></i> Delete
-      <% end %>
-    <% end %>
+  <div id="challenge-organizer">
+    <%= cl_image_tag @challenge.user.photo, class: "challenge-details-user avatar-bordered mx-auto d-block" %>
   </div>
-  <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
 </div>
+
+<div class="container texts-infos d-flex justify-content-around mt-5 text-center">
+
+
+  <h2><%= @challenge.title %></h2>
+  <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
+  <p><i class="far fa-calendar-check"></i> <%= @challenge.date %></p>
+  <h2 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h2>
+
+  <div class="buttons-infos d-flex justify-content-around">
+    <div class="text-center">
+      <% if current_user == @challenge.user %>
+        <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
+          <i class="fas fa-trash-alt"></i> Delete
+        <% end %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
+    </div>
+  </div>
+
+
+</div>
+
