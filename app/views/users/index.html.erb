@@ -3,10 +3,12 @@
 <div class="card-users-top">
   <% @users.each do |user| %>
     <div class="card-user">
-      <img></img>
       <div class="card-user-infos">
-        <h1>Nom</h1>
-        <p>score</p>
+      <%= cl_image_tag user.photo, crop: :fill %>
+        <h1><%= user.first_name %></h1>
+        <p>user score</p>
+        <div class="items" style="text-align: center;"><i class="far fa-star" ></i><i class="far fa-star"></i><i class="far fa-star"></i>
+        </div>
       </div>
     </div>
   <% end %>
@@ -16,7 +18,7 @@
 <div class="cards-users-list">
     <% @users.each do |user| %>
       <div class="card-users">
-        <%= cl_image_tag user.photo, height: 100, width: 150, crop: :fill %>
+        <%= cl_image_tag user.photo, crop: :fill %>
         <div class="card-user-infos">
           <h2><%= user.first_name %></h2>
           <p>user score</p>
