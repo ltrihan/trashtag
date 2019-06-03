@@ -1,18 +1,32 @@
-<div class="challenge-details" style="
-    height: 92%">
-  <div class="text-center" >
+<div class="challenge-details">
   <%= cl_image_tag @challenge.photo, height: 300, width: 300, crop: :fill %>
+
+  <div id="challenge-organizer">
+    <%= cl_image_tag @challenge.user.photo, class: "challenge-details-user avatar-bordered mx-auto d-block" %>
+  </div>
+</div>
+
+<div class="container texts-infos d-flex justify-content-around mt-5 text-center">
+
 
   <h2><%= @challenge.title %></h2>
   <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
   <p><i class="far fa-calendar-check"></i> <%= @challenge.date %></p>
-  <p><i class="fas fa-users"></i> Nombre de participations : <%= @challenge.participations.count %></p>
+  <h2 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h2>
 
-  <% if current_user == @challenge.user %>
-    <%= link_to "Delete this challenge", challenge_path(@challenge), class: 'btn btn-success', method: :delete %>
-  <% end %>
-  <%= link_to "Participate", challenge_participations_path(@challenge), method: :post %>
-
+  <div class="buttons-infos d-flex justify-content-around">
+    <div class="text-center">
+      <% if current_user == @challenge.user %>
+        <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
+          <i class="fas fa-trash-alt"></i> Delete
+        <% end %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
+    </div>
   </div>
+
+
 </div>
 

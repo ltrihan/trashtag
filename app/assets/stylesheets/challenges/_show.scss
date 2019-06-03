@@ -1,6 +1,40 @@
-  .challenge-details {
-    height: 92%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     }
+// ========= CHALLENGE SHOW (DETAILS) ===========
+
+.challenge-details {
+  background: white;
+  text-align: center;
+}
+
+.challenge-details > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#challenge-organizer {
+  position: relative;
+}
+
+.challenge-details-user {
+  position: absolute;
+  width: 100px;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.challenge-details h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.challenge-details p {
+  font-size: 16px;
+  opacity: .7;
+}
+
+.texts-infos {
+  flex-direction: column;
+  margin-bottom: 85px;
+  height: 100vh;
+}
+
