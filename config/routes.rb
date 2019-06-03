@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :challenges do
     resources :participations, only: [:create]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
 end
