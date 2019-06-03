@@ -26,7 +26,8 @@
         <%= cl_image_tag challenge.photo, height: 100, width: 150, crop: :fill %>
         <div class="card-challenge-infos">
           <h2><%= challenge.title %></h2>
-          <p>Challenge description with <strong>relevant info</strong> only.</p>
+          <p><%= challenge.place %></p>
+          <p><%= challenge.date %></p>
           <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
         </div>
       </div>
