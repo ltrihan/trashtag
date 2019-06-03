@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Top Challengers</h1>
+<h1 class="text-center">Top Challengers</h1>
 
 <div class="card-users-top">
   <% @users.first(3).each do |user| %>
@@ -7,14 +7,14 @@
       <%= cl_image_tag user.photo, class:"mx-auto d-block"%>
         <h1><%= user.first_name %></h1>
         <p>user score</p>
-        <div class="items" style="text-align: center;"><i class="far fa-star" ></i><i class="far fa-star"></i><i class="far fa-star"></i>
+        <div class="items text-center"><i class="far fa-star" ></i><i class="far fa-star"></i><i class="far fa-star"></i>
         </div>
       </div>
     </div>
   <% end %>
 </div>
 
-<h2 style="text-align: center;"> Challengers </h2>
+<h2 class="text-center"> Challengers </h2>
 <div class="cards-users-list">
     <% @users.each do |user| %>
       <div class="card-users">
