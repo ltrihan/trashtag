@@ -3,10 +3,58 @@
   margin-bottom: 10px;
 }
 
+.card-profile {
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 10px;
+  background-image: url('https://ak4.picdn.net/shutterstock/videos/5304824/thumb/1.jpg');
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px #8faab5;
+}
+
+.profile {
+  background-color: white;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: white;
+  margin-bottom: 30px;
+}
+
+h2, p {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.challenges {
+  background-color: #307d99;
+}
+
+.participations {
+  background-color: #307d99;
+}
+
+h4 {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: white;
+}
+
 .my-challenges {
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: -10px;
 }
 
 .my-participations {
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: -10px;
 }
+
+.challenges-block {
+  box-shadow: 3px 3px #8faab5;
+}
+
+.participations-block {
+  box-shadow: 3px 3px #8faab5;
+}
+
