@@ -1,1 +1,27 @@
-Top Challlengers
+<h1 style="text-align: center;">Top Challengers</h1>
+
+<div class="card-users-top">
+  <% @users.each do |user| %>
+    <div class="card-user">
+      <img></img>
+      <div class="card-user-infos">
+        <h1>Nom</h1>
+        <p>score</p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h2 style="text-align: center;"> Challengers </h2>
+<div class="cards-users-list">
+    <% @users.each do |user| %>
+      <div class="card-users">
+        <%= cl_image_tag user.photo, height: 100, width: 150, crop: :fill %>
+        <div class="card-user-infos">
+          <h2><%= user.first_name %></h2>
+          <p>user score</p>
+        </div>
+      </div>
+    <% end %>
+</div>
+

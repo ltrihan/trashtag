@@ -37,3 +37,42 @@
   margin-right: 4%;
   margin-left: 4%;
 }
+
+.card-users-top {
+  align-items: center;
+}
+
+.card-users {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px
+}
+
+.card-user {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px
+}
+
+.card-user .card-users img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.cards-users-list {
+  margin-top: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.card-user .card-user-infos {
+  padding: 16px;
+}
