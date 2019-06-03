@@ -6,4 +6,8 @@ class UsersController < ApplicationController
       @user = current_user
     end
   end
+
+  def index
+    @users = User.all
+  end
 end
