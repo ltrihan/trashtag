@@ -21,10 +21,16 @@
   margin-bottom: 30px;
 }
 
-h2, p {
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-style: normal;
+}
+
+p {
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
 }
+
 
 .challenges {
   background-color: #307d99;
@@ -42,20 +48,22 @@ h4 {
 
 .my-challenges {
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
 }
 
 .my-participations {
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
 }
 
 .challenges-block {
-  box-shadow: 2px 2px #8faab5;
+
+
 }
 
 .participations-block {
-  box-shadow: 2px 2px #8faab5;
+
   margin-bottom: 80px;
+
 }
 
