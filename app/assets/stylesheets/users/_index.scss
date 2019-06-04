@@ -1,27 +1,28 @@
 .card-users-top {
   display: flex;
   justify-content: center;
-  margin-top: 5px;
+  background-image: url('https://ak4.picdn.net/shutterstock/videos/5304824/thumb/1.jpg');
+  background-position: center;
 }
 
 .card-user img {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  object-fit: cover;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .card-user {
   overflow: hidden;
-  background: white;
+  background-color: seashell;
+  border-radius: 5px;
   height: 300px;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .card-user h1 {
@@ -77,8 +78,4 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-}
-
-.card-user .card-user-infos {
-  padding: 16px;
 }
