@@ -15,6 +15,7 @@ class ChallengesController < ApplicationController
 
   def show
     @challenge = Challenge.find(params[:id])
+    
   end
 
   def new
@@ -41,6 +42,8 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:title, :place, :date, :photo)
+    parameters = params.require(:challenge).permit(:title, :place, :str_date, :photo)
+    parameters.merge!({date: DateTime.parse(params[:challenge][:str_date])})
+    return parameters
   end
 end
