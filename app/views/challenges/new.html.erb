@@ -1,20 +1,29 @@
 <div class="container">
-  <h1>Create your challenge</h1>
+  <div class="challenge-new">
+    <div class="card">
+      <h3 class="text-center">Create your challenge</h3>
 
-  <%= simple_form_for @challenge do |f| %>
-    <%= f.input :title, placeholder: "Enter challenge title" %>
-    <%= f.input :place, placeholder: "Enter challenge address" %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <div class="input-append date form_datetime">
+      <%= simple_form_for @challenge do |f| %>
+        <%= f.input :title, placeholder: "Enter challenge title" %>
+        <%= f.input :place, placeholder: "Enter challenge address" %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <div class="input-append date form_datetime">
         <%= f.input :str_date, label: "Date du challenge" , as: :string, input_html: {class: "datepicker"} %>
         <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+        <div class="text-center">
+        <%= f.submit class: ' submit btn-primary' %>
+      <% end %>
+      </div>
     </div>
-
-    <%= f.submit class: 'btn-primary' %>
-  <% end %>
-
+  </div>
 </div>
+
+
+
+
+
 
 <!-- <script type="text/javascript">
     $(".form_datetime").datetimepicker({
