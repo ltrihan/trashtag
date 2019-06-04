@@ -10,4 +10,8 @@ class Challenge < ApplicationRecord
 
   geocoded_by :place
   after_validation :geocode
+
+  def format_date
+    date.strftime(" %A %e %B %Y - %l:%M") 
+  end
 end
