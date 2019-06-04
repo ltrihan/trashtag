@@ -1,5 +1,6 @@
-<h1 class="text-center">Top Challengers</h1>
-
+<div class="challenges">
+  <h4 class="text-center">Top Challengers</h4>
+</div>
 <div class="card-users-top">
   <% @users.first(3).each do |user| %>
     <div class="card-user">
@@ -14,7 +15,9 @@
   <% end %>
 </div>
 
-<h2 class="text-center"> Challengers </h2>
+<div class="challenges">
+<h4 class="text-center"> Challengers </h4>
+</div>
 <div class="cards-users-list">
     <% @users.each do |user| %>
       <div class="card-users">
