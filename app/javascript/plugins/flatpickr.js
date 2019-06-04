@@ -6,5 +6,5 @@ flatpickr(".datepicker", {
     "locale": French,
     altInput: true,
     enableTime: true,
-    dateFormat: "Y-m-d - H:i"
+    dateFormat: "%A %m %B %Y %l",
 })
