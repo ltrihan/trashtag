@@ -19,10 +19,9 @@
         <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
           <i class="fas fa-trash-alt"></i> Delete
         <% end %>
+      <% else %>
+        <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
       <% end %>
-    </div>
-    <div>
-      <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
     </div>
   </div>
 
