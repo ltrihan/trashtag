@@ -8,7 +8,10 @@
       <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
         <div class="card-user">
           <div class="card-user-infos">
-            <%= cl_image_tag user.photo %>
+            <div class="text-center">
+              <%= cl_image_tag user.photo %>
+            </div>
+
             <h1><%= user.first_name %></h1>
             <p>user score</p>
             <div class="items text-center">
