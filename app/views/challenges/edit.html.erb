@@ -4,7 +4,7 @@
       <h3 class="text-center">Enclose your challenge</h3>
 
       <%= simple_form_for @challenge do |f| %>
-        <%= f.input :photo, label: "Add your ending photo" %>
+        <%= f.input :photo_after, label: "Add your ending photo" %>
         <%= f.input :photo_cache, as: :hidden %>
         <div class="text-center">
           <%= f.submit 'Enclose challenge', class: 'submit btn-primary' %>
