@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def default_url_options
-  { "localhost:3000" }
+  { host: ENV["www.trashtag.pro"] || "localhost:3000" }
   end
 
 end
