@@ -23,11 +23,6 @@ lacanau.remote_photo_url = 'http://rue89bordeaux.com/wp-content/uploads/2014/08/
 lacanau.user = justine
 lacanau.save
 
-arcachon = Challenge.new(title: "Loïc's challenge", place: 'Arcachon', date: "2019-10-30 10:00:01")
-arcachon.remote_photo_url = 'https://images.sudouest.fr/2018/10/25/5bd1fff766a4bd825e6a491f/widescreen/1000x500/des-galettes-sont-presentes-sur-49-plages-du-departement.jpg?v1'
-arcachon.user = loic
-arcachon.save
-
 tarnos = Challenge.new(title: "Tristan's challenge", place: 'Tarnos', date: "2019-11-22 14:06:00")
 tarnos.remote_photo_url = 'https://www.francetvinfo.fr/image/750buu13x-2e9d/1200/450/3528877.jpg'
 tarnos.user = tristan
