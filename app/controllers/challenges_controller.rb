@@ -64,7 +64,7 @@ class ChallengesController < ApplicationController
 
   def challenge_params
     parameters = params.require(:challenge).permit(:title, :place, :str_date, :photo, :photo_after)
-    parameters.merge!({ date: DateTime.parse(params[:challenge][:str_date]) }) if @challenge.date.nil?
+    parameters.merge!({ date: DateTime.parse(params[:challenge][:str_date]) }) if params[:challenge][:str_date].present?
     # parameters[:date] = DateTime.parse(params[:challenge][:str_date])
     return parameters
   end
