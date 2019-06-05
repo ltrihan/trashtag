@@ -39,10 +39,14 @@ class ChallengesController < ApplicationController
   def update
     @challenge = Challenge.find(params[:id])
 
-    if @challenge.update(challenge_params)
-      @challenge.status = 1
-      @challenge.user.score += 20
-      @challenge.users.score += 10
+    if @challenge.update(challenge_params.merge(status: 1))
+      organizer = @challenge.user
+      organizer.score += 20
+      organizer.save
+      @challenge.users.each do |participant|
+        participant.score += 10
+        participant.save
+      end
 
       redirect_to challenge_path(@challenge)
     else
