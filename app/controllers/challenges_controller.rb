@@ -15,7 +15,6 @@ class ChallengesController < ApplicationController
 
   def show
     @challenge = Challenge.find(params[:id])
-    
   end
 
   def new
@@ -33,6 +32,28 @@ class ChallengesController < ApplicationController
     end
   end
 
+  def edit
+    @challenge = Challenge.find(params[:id])
+  end
+
+  def update
+    @challenge = Challenge.find(params[:id])
+
+    if @challenge.update(challenge_params.merge(status: 1))
+      organizer = @challenge.user
+      organizer.score += 20
+      organizer.save
+      @challenge.users.each do |participant|
+        participant.score += 10
+        participant.save
+      end
+
+      redirect_to challenge_path(@challenge)
+    else
+      render 'update'
+    end
+  end
+
   def destroy
     @challenge = Challenge.find(params[:id])
     @challenge.destroy
@@ -42,8 +63,9 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    parameters = params.require(:challenge).permit(:title, :place, :str_date, :photo)
-    parameters.merge!({date: DateTime.parse(params[:challenge][:str_date])})
+    parameters = params.require(:challenge).permit(:title, :place, :str_date, :photo, :photo_after)
+    parameters.merge!({ date: DateTime.parse(params[:challenge][:str_date]) }) if @challenge.date.nil?
+    # parameters[:date] = DateTime.parse(params[:challenge][:str_date])
     return parameters
   end
 end

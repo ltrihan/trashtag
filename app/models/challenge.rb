@@ -10,6 +10,7 @@ class Challenge < ApplicationRecord
   enum status: { ongoing: 0, finished: 1 }
 
   mount_uploader :photo, PhotoUploader
+  mount_uploader :photo_after, PhotoUploader
 
   geocoded_by :place
   after_validation :geocode

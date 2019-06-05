@@ -15,12 +15,18 @@
 
   <div class="buttons-infos d-flex justify-content-around">
     <div class="text-center">
-      <% if current_user == @challenge.user %>
+      <% if current_user == @challenge.user && @challenge.ongoing? %>
+        <%= link_to edit_challenge_path(@challenge), class: 'btn btn-success' do %>
+          <i class="fas fa-check-circle"></i> Enclose
+        <% end %>
         <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
           <i class="fas fa-trash-alt"></i> Delete
         <% end %>
-      <% else %>
+      <% elsif @challenge.ongoing? %>
         <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
+      <% else %>
+        <p>This is a past challenge.</p>
+        <%= cl_image_tag @challenge.photo_after, height: 300, width: 300, crop: :fill  %>
       <% end %>
     </div>
   </div>
