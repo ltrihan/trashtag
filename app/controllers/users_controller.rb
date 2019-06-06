@@ -9,5 +9,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @top_users = @users.sort_by {|user| user.score }.last(3).reverse
+    @last_users = @users.sort_by {|user| user.score }.first(4).reverse
   end
 end
