@@ -24,3 +24,15 @@
   font-weight: normal;
 }
 
+.new-challenge-form {
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -59px;
+}
+
+.container-without-height {
+      height: 100% !important;
+}

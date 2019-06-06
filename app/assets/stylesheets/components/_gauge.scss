@@ -1,11 +1,15 @@
 .gauge-container {
-  margin: 40px 0;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
 }
 
 .bg-gauge {
   height: 20px;
   width: 80%;
-  background: grey;
+  background: #9c9c9c;
   margin: auto;
   border-radius: 5px;
   position: relative;
@@ -13,7 +17,7 @@
 
 .gauge {
   height: 20px;
-  background: green;
+  background: $primary;
   position: absolute;
   bottom: 0px;
   border-radius: 5px;
@@ -24,7 +28,7 @@
   height: 50px;
   position: absolute;
   top: -10px;
-  background-image: url('https://png.pngtree.com/element_pic/00/16/08/2557bef6db8d65c.jpg');
+  background-image: url('https://freepngimg.com/thumb/cute/29802-7-cute-turtle-transparent.png');
   background-size: cover;
 }
 
