@@ -2,9 +2,9 @@
 <div class="container">
   <div class="profile">
     <div class="card-profile">
-    <%= cl_image_tag(@user.photo, :size => '100x100', class: 'rounded-circle') %>
-    <h2 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h2>
-      <p><%= @user.description %></p>
+      <%= cl_image_tag(@user.photo, :size => '100x100', class: 'rounded-circle') %>
+      <h2 class="name-profile"><%= @user.first_name %> <%= @user.last_name %></h2>
+      <p class="description-profile"><%= @user.description %></p>
     </div>
     </div>
 

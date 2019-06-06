@@ -45,11 +45,9 @@ body{
   font-style: normal;
 }
 
-
 .banner-content {
   margin-top: 48vh;
 }
-
 
 #link-home > a {
   color: white;
@@ -64,10 +62,11 @@ body{
   image-position: center;
 }
 
-
-.arrow a, a:hover { color: #1ae09f; text-decoration: none; scroll-behavior: smooth;}
-
-
+.arrow a, a:hover { 
+  color: #1ae09f; 
+  text-decoration: none; 
+  scroll-behavior: smooth;
+}
 
 .arrow {
   text-align: center;
@@ -80,8 +79,6 @@ body{
   animation: bounce 2s infinite;
 
 }
-
-
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
