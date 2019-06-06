@@ -5,20 +5,39 @@
 
 .card-profile {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 12px;
+  margin-bottom: -32px;
   padding-top: 10px;
-  background-image: url('https://ak4.picdn.net/shutterstock/videos/5304824/thumb/1.jpg');
+  padding-bottom: 32px;
+  background-color: seashell;
   background-position: center;
-  border-radius: 5px;
-  box-shadow: 3px 3px #8faab5;
+  border-radius: 5px 5px 0 0 ;
+  border: solid;
+  border-color: #2F7D99;
+  color:  #2F7D99;
 }
 
+.card-profile{
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .profile {
   background-color: white;
   font-family: 'Libre Baskerville', serif;
   font-style: normal;
   color: white;
   margin-bottom: 30px;
+}
+
+.name-profile{
+  margin: 6px;
+}
+
+.description-profile{
+  margin-top: 14px;
 }
 
 h2 {
@@ -45,11 +64,13 @@ h4 {
   font-style: normal;
   color: white;
   margin-top: 5px;
+  padding: 8px;
 }
 
 .my-challenges {
   text-align: center;
   margin-bottom: 0px;
+  padding: 8px;
 }
 
 .my-participations {
@@ -57,10 +78,13 @@ h4 {
   margin-bottom: 0px;
 }
 
+<<<<<<< HEAD
 .challenges-block {
 
 }
 
+=======
+>>>>>>> 99bc7688ad186aaf7a1e3b8d82470b107ea55db0
 .participations-block {
 
   margin-bottom: 80px;
