@@ -1,33 +1,54 @@
 <div class="navbar fixed-bottom navbar-expand-sm navbar-light navbar-lewagon">
   <ul class="navbar-nav w-100 d-flex flex-row justify-content-around" >
     <% if user_signed_in? %>
+
       <li class="nav-item">
         <%= link_to root_path, class: "nav-link" do %>
-          <i class="fas fa-home" ></i>
+          <% if request.url == root_url %>
+            <i class="fas fa-home active" ></i>
+          <% else %>
+            <i class="fas fa-home" ></i>
+          <% end %>
         <% end %>
       </li>
 
       <li class="nav-item">
       <%= link_to challenges_path, class: "nav-link" do %>
-        <i class="fas fa-tasks"></i>
-      <% end %>
+        <% if request.url == challenges_url %>
+          <i class="fas fa-tasks active"></i>
+        <% else %>
+          <i class="fas fa-tasks" ></i>
+          <% end %>
+        <% end %>
       </li>
 
        <li class="nav-item">
         <%= link_to new_challenge_path, class: "nav-link" do %>
-          <i class="fas fa-camera"></i></i>
+          <% if request.url == new_challenge_url %>
+            <i class="fas fa-camera active"></i></i>
+        <% else %>
+            <i class="fas fa-camera" ></i>
+          <% end %>
         <% end %>
       </li>
 
       <li class="nav-item">
         <%= link_to users_path, class: "nav-link" do %>
-          <i class="fas fa-sort-amount-up"></i></i>
+          <% if request.url == users_url %>
+            <i class="fas fa-sort-amount-up active"></i></i>
+          <% else %>
+            <i class="fas fa-sort-amount-up " ></i>
+          <% end %>
         <% end %>
       </li>
 
       <li class="nav-avatar">
         <%= link_to user_path(current_user), class: "nav-link" do %>
-          <i class="fas fa-user"></i></i>
+          <% if request.url == user_url(current_user) %>
+            <i class="fas fa-user active"></i></i>
+            <% else %>
+            <i class="fas fa-user " ></i>
+          <% end %>
         <% end %>
       </li>
 

@@ -41,6 +41,7 @@ body{
 .banner h2 {
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 30px;
+  margin-top: -31px;
   font-style: normal;
 }
 
@@ -56,7 +57,7 @@ body{
 
 #link-home {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .images-home {
@@ -70,7 +71,7 @@ body{
 
 .arrow {
   text-align: center;
-  margin: 14% 0;
+  margin: 6% 0 13% 0;
 
 }
 .bounce {
@@ -80,28 +81,30 @@ body{
 
 }
 
+
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
 
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
 
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-05px);
   }
 }
 
 #anchor {
   width: 100vw;
   margin-bottom: 60px;
+}
 
   img {
     width: 100%;
-  };
-}
+  }
 
 html {
   scroll-behavior: smooth;
