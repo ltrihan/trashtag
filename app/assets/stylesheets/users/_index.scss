@@ -1,3 +1,5 @@
+@import "carousel";
+
 .card-user img {
   height: 80px;
   width: 80px;
@@ -55,11 +57,11 @@ margin-top: 8px;
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
 }
+
 .cards-users-list a {
   color: black;
-
 }
 
 .card-users img {
@@ -87,4 +89,3 @@ margin-top: 8px;
   bottom: 10px;
   right: 10px;
 }
-
