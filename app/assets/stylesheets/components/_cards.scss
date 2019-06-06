@@ -2,7 +2,7 @@
 
 .card-challenge {
   overflow: hidden;
-  height: 120px;
+  height: 150px;
   background: white;
   display: flex;
   align-items: center;
@@ -11,12 +11,18 @@
 
 .card-challenge img {
   height: 100%;
-  width: 120px;
+  width: 150px;
   object-fit: cover;
 }
 
-.card-challenge h2 {
-  font-size: 16px;
+.card-challenge a {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.card-challenge h6 {
+  font-family: 'Libre Baskerville', serif;
   font-weight: bold;
   margin: 0;
 }
@@ -41,5 +47,6 @@
 }
 
 .card-challenge-infos-16{
+  width: 100%;
   padding: 16px;
 }

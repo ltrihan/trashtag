@@ -11,22 +11,22 @@
   <h2><%= @challenge.title %></h2>
   <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
   <p><i class="far fa-calendar-check"></i> <%= @challenge.format_date %></p>
-  <h2 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h2>
+  <h5 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h5>
 
   <div class="buttons-infos d-flex justify-content-around">
     <div class="text-center">
       <% if current_user == @challenge.user && @challenge.ongoing? %>
-        <%= link_to edit_challenge_path(@challenge), class: 'btn btn-success' do %>
+        <%= link_to edit_challenge_path(@challenge), class: 'btn btn-success btn-cta' do %>
           <i class="fas fa-check-circle"></i> Enclose
         <% end %>
         <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
           <i class="fas fa-trash-alt"></i> Delete
         <% end %>
       <% elsif @challenge.ongoing? %>
-        <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
+        <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success btn-cta', method: :post %>
       <% else %>
         <p>This is a past challenge.</p>
-        <%= cl_image_tag @challenge.photo_after, height: 300, width: 300, crop: :fill  %>
+        <%= cl_image_tag @challenge.photo_after, height: 300, width: 300, crop: :fill, class: 'photo-challenge-after'  %>
       <% end %>
     </div>
   </div>

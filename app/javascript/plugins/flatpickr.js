@@ -6,4 +6,5 @@ flatpickr(".datepicker", {
     "locale": French,
     altInput: true,
     enableTime: true,
+    disableMobile: true
 })
