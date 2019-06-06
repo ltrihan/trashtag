@@ -7,6 +7,5 @@ class User < ApplicationRecord
   has_many :challenges
   has_many :participations
   has_many :participated_challenges, through: :participations, source: :challenge
-
   # validates :first_name, :last_name, presence: true
 end
