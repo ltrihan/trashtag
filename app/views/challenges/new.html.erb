@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container new-challenge-form">
   <div class="challenge-new">
     <div class="card">
       <h3 class="text-center">Create your challenge</h3>
-      <div class="container">
+      <div class="container container-without-height">
         <%= simple_form_for @challenge do |f| %>
             <%= f.input :title, placeholder: "Enter challenge title" %>
             <%= f.input :place, placeholder: "Enter challenge address" %>

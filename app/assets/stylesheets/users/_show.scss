@@ -18,7 +18,7 @@
 }
 
 .card-profile{
-  min-height: 300px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,6 @@
   font-family: 'Libre Baskerville', serif;
   font-style: normal;
   color: white;
-  margin-bottom: 30px;
 }
 
 .name-profile{
@@ -38,6 +37,7 @@
 
 .description-profile{
   margin-top: 14px;
+  margin-bottom: 0;
 }
 
 h2 {
