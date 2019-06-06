@@ -14,6 +14,10 @@ body{
 //   padding: 0px;
 // }
 
+.container {
+  height: 100vh;
+}
+
 .banner {
   color: white;
   background-image: linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.5) 70%), asset-url('background_home.jpg');
@@ -26,6 +30,7 @@ body{
   // align-items: center;
   // justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .banner h1 {
@@ -70,17 +75,19 @@ body{
 
 .arrow {
   text-align: center;
-  margin: 6% 0 13% 0;
-
+  margin: 6% 0 28% 0;
 }
+
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
-
 }
 
 
+.fa-arrow-down {
+  margin-left: 15px;
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
