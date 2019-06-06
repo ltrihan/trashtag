@@ -26,7 +26,8 @@
   font-weight: bold;
 }
 
-.challenge-details h5 {
+.challenge-details-participations {
+  font-family: 'Libre Baskerville', serif;
   font-weight: bold;
 }
 
@@ -39,6 +40,10 @@
   flex-direction: column;
   margin-bottom: 85px;
   height: 100vh;
+}
+
+.photo-challenge-after {
+  margin-bottom: 20px;
 }
 
 // ============== SHARE BUTTON ===========

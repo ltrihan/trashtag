@@ -26,7 +26,7 @@
         <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
       <% else %>
         <p>This is a past challenge.</p>
-        <%= cl_image_tag @challenge.photo_after, height: 300, width: 300, crop: :fill  %>
+        <%= cl_image_tag @challenge.photo_after, height: 300, width: 300, crop: :fill, class: 'photo-challenge-after'  %>
       <% end %>
     </div>
   </div>
