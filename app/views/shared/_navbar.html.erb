@@ -4,7 +4,7 @@
 
       <li class="nav-item">
         <%= link_to root_path, class: "nav-link" do %>
-          <% if request.url == root_url %>
+          <% if current_page?(root_path) %>
             <i class="fas fa-home active" ></i>
           <% else %>
             <i class="fas fa-home" ></i>
@@ -14,7 +14,7 @@
 
       <li class="nav-item">
       <%= link_to challenges_path, class: "nav-link" do %>
-        <% if request.url == challenges_url %>
+        <% if current_page?(challenges_path) %>
           <i class="fas fa-tasks active"></i>
         <% else %>
           <i class="fas fa-tasks" ></i>
@@ -24,7 +24,7 @@
 
        <li class="nav-item">
         <%= link_to new_challenge_path, class: "nav-link" do %>
-          <% if request.url == new_challenge_url %>
+          <% if current_page?(new_challenge_path) %>
             <i class="fas fa-camera active"></i></i>
         <% else %>
             <i class="fas fa-camera" ></i>
@@ -34,7 +34,7 @@
 
       <li class="nav-item">
         <%= link_to users_path, class: "nav-link" do %>
-          <% if request.url == users_url %>
+          <% if current_page?(users_path)%>
             <i class="fas fa-sort-amount-up active"></i></i>
           <% else %>
             <i class="fas fa-sort-amount-up " ></i>
@@ -44,7 +44,7 @@
 
       <li class="nav-avatar">
         <%= link_to user_path(current_user), class: "nav-link" do %>
-          <% if request.url == user_url(current_user) %>
+          <% if current_page?(user_path(current_user)) %>
             <i class="fas fa-user active"></i></i>
             <% else %>
             <i class="fas fa-user " ></i>
