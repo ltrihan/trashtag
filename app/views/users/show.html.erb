@@ -1,48 +1,54 @@
-
 <div class="container">
   <div class="profile">
     <div class="card-profile">
-    <%= cl_image_tag(@user.photo, :size => '100x100', class: 'rounded-circle') %>
-    <h2 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h2>
+      <%= cl_image_tag(@user.photo, :size => '100x100', class: 'rounded-circle') %>
+      <h2 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h2>
       <p><%= @user.description %></p>
     </div>
-    </div>
+  </div>
 
-    <div class="challenges-block">
+  <div class='gauge-container'>
+    <div class="bg-gauge">
+      <div class="gauge" style='<%= user_score_to_css_width(@user) %>;'></div>
+      <div class="turtle" style='<%= user_score_to_css_position(@user) %>'></div>
+    </div>
+  </div>
+
+  <div class="challenges-block">
     <div class="challenges">
-    <h4 class="my-challenges">My challenges</h4>
+      <h4 class="my-challenges">My challenges</h4>
     </div>
-        <div class="cards-challenges-list">
-          <% @user.challenges.each do |challenge| %>
-            <div class="card-challenge">
-              <%= cl_image_tag challenge.photo, height: 100, width: 150, crop: :fill %>
-                <div class="card-challenge-infos-16">
-                  <h2><%= challenge.title %></h2>
-                    <p><%= challenge.place %></p>
-                    <p><%= challenge.date %></p>
-                  <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
-                </div>
-            </div>
-          <% end %>
+    <div class="cards-challenges-list">
+      <% @user.challenges.each do |challenge| %>
+        <div class="card-challenge">
+          <%= cl_image_tag challenge.photo, height: 100, width: 150, crop: :fill %>
+          <div class="card-challenge-infos-16">
+            <h6><%= challenge.title %></h6>
+            <p><%= challenge.place %></p>
+            <p><%= challenge.format_date %></p>
+            <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
+          </div>
         </div>
-        </div>
+      <% end %>
+    </div>
+  </div>
 
-    <div class="participations-block">
+  <div class="participations-block">
     <div class="participations">
-    <h4 class="my-participations text-center">My participations</h4>
+      <h4 class="my-participations text-center">My participations</h4>
     </div>
     <div class="cards-challenges-list">
       <% @user.participations.each do |participation| %>
         <div class="card-challenge">
           <%= cl_image_tag participation.challenge.photo, height: 100, width: 150, crop: :fill %>
-            <div class="card-challenge-infos-16">
-              <h2><%= participation.challenge.title %></h2>
-                <p><%= participation.challenge.place %></p>
-                <p><%= participation.challenge.date %></p>
-                <%= link_to "More details", challenge_path(participation.challenge), class: 'btn btn-primary' %>
-            </div>
+          <div class="card-challenge-infos-16">
+            <h6><%= participation.challenge.title %></h6>
+            <p><%= participation.challenge.place %></p>
+            <p><%= participation.challenge.format_date %></p>
+            <%= link_to "More details", challenge_path(participation.challenge), class: 'btn btn-primary' %>
+          </div>
         </div>
       <% end %>
     </div>
-    </div>
+  </div>
 </div>
