@@ -20,7 +20,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
+  width: 102%;
   height: 100vh;
   display: flex;
   // align-items: center;
@@ -41,6 +41,7 @@ body{
 .banner h2 {
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 30px;
+  margin-top: -31px;
   font-style: normal;
 }
 
@@ -56,7 +57,7 @@ body{
 
 #link-home {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .images-home {
@@ -64,13 +65,13 @@ body{
 }
 
 
-.arrow a, a:hover { color: #1ae09f; text-decoration: none; scroll-behavior: smooth;}
+.arrow a, a:hover { color: #1ae09f; text-decoration: none; scroll-behavior: smooth; margin-top: -100px;}
 
 
 
 .arrow {
   text-align: center;
-  margin: 14% 0;
+  margin: 13% 0;
 
 }
 .bounce {
@@ -86,11 +87,11 @@ body{
 
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
 
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-05px);
   }
 }
 
