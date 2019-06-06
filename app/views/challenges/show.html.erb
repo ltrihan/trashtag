@@ -12,7 +12,10 @@
   <!-- fa-globe-americas -->
   <p><i class="fas fa-map-marker-alt"></i> <%= @challenge.place %></p>
   <p><i class="far fa-calendar-check"></i> <%= @challenge.format_date %></p>
-  <h5 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h5>
+  <div class="challenge-details-participations">
+    <h1><i class="fas fa-users"></i> <%= @challenge.participations.count %></h1>
+    <h5>participants</h5>
+  </div>
 
   <div class="buttons-infos d-flex justify-content-around">
     <div class="text-center">
