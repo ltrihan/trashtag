@@ -19,7 +19,7 @@
                 <div class="card-challenge-infos-16">
                   <h2><%= challenge.title %></h2>
                     <p><%= challenge.place %></p>
-                    <p><%= challenge.date %></p>
+                    <p><%= challenge.format_date %></p>
                   <%= link_to "More details", challenge_path(challenge), class: 'btn btn-primary' %>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             <div class="card-challenge-infos-16">
               <h2><%= participation.challenge.title %></h2>
                 <p><%= participation.challenge.place %></p>
-                <p><%= participation.challenge.date %></p>
+                <p><%= participation.challenge.format_date %></p>
                 <%= link_to "More details", challenge_path(participation.challenge), class: 'btn btn-primary' %>
             </div>
         </div>
