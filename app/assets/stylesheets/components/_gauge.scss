@@ -1,0 +1,31 @@
+.gauge-container {
+  margin: 40px 0;
+}
+
+.bg-gauge {
+  height: 20px;
+  width: 80%;
+  background: grey;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.gauge {
+  height: 20px;
+  background: green;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 5px;
+}
+
+.turtle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  background-image: url('https://png.pngtree.com/element_pic/00/16/08/2557bef6db8d65c.jpg');
+  background-size: cover;
+}
+
+// TODO: Define colors and chose a better turtle
