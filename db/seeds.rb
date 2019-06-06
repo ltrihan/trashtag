@@ -14,9 +14,13 @@ users_data = [
 ]
 User.create!(users_data)
 
-loic, kevin, justine, tristan = User.first(4)
+loic, kevin, justine, tristan, say, julie, arthur = User.first(7)
 
 
+guéthary = Challenge.new(title: "Kévin's challenge", place: 'Guéthary', date: "2020-01-05 17:30:00")
+guéthary.remote_photo_url = 'http://www.amisdelaterre40.fr/spip/IMG/jpg/Contis_-_enfant_sur_la_plage.jpg'
+guéthary.user = kevin
+guéthary.save
 
 lacanau = Challenge.new(title: "Justine's challenge", place: 'Lacanau', date: "2019-07-07 07:07:07")
 lacanau.remote_photo_url = 'http://rue89bordeaux.com/wp-content/uploads/2014/08/surfrider2.png'
@@ -28,14 +32,10 @@ tarnos.remote_photo_url = 'https://www.francetvinfo.fr/image/750buu13x-2e9d/1200
 tarnos.user = tristan
 tarnos.save
 
-guéthary = Challenge.new(title: "Kévin's challenge", place: 'Guéthary', date: "2020-01-05 17:30:00")
-guéthary.remote_photo_url = 'http://www.amisdelaterre40.fr/spip/IMG/jpg/Contis_-_enfant_sur_la_plage.jpg'
-guéthary.user = kevin
-guéthary.save
 
-Participation.new(user: kevin, challenge: arcachon).save
-Participation.new(user: tristan, challenge: arcachon).save
-Participation.new(user: justine, challenge: arcachon).save
+Participation.new(user: say, challenge: guéthary).save
+Participation.new(user: tristan, challenge: guéthary).save
+Participation.new(user: justine, challenge: guéthary).save
 
 Participation.new(user: kevin, challenge: lacanau).save
 Participation.new(user: tristan, challenge: lacanau).save
