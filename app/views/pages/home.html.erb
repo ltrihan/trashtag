@@ -3,19 +3,13 @@
     <h1>Trashtag</h1>
     <div class="text-center banner-content">
       <h2>It's time to save the earth, more than ever</h2>
+      <div class="arrow bounce">
+        <div class="fa fa-arrow-down fa-2x"></div>
+      </div>
       <%= link_to "Create your challenge", new_challenge_path, class: 'btn btn-success btn-lg btn-cta' %>
     </div>
     <div id="link-home">
       <%= link_to "Or see challenges list", challenges_path %>
     </div>
   </div>
-    <div class="arrow bounce">
-      <a class="fa fa-arrow-down fa-2x" href="#home-anchor"></a>
-    </div>
-</div>
-
-<div id="home-anchor">
-  <%= image_tag("plastics.jpg") %>
-  <%= image_tag("turtles_dead.jpg") %>
-  <%= image_tag("animals_dead.jpg") %>
 </div>
