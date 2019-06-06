@@ -9,18 +9,18 @@
 <div class="container texts-infos d-flex justify-content-around mt-5 text-center">
 
   <h2><%= @challenge.title %></h2>
-  <p><i class="fas fa-globe-americas"></i> <%= @challenge.place %></p>
+  <!-- fa-globe-americas -->
+  <p><i class="fas fa-map-marker-alt"></i> <%= @challenge.place %></p>
   <p><i class="far fa-calendar-check"></i> <%= @challenge.format_date %></p>
   <h2 class="challenge-details-participations"><i class="fas fa-users"></i> <%= @challenge.participations.count %> participants</h2>
 
   <div class="buttons-infos d-flex justify-content-around">
     <div class="text-center">
       <% if current_user == @challenge.user && @challenge.ongoing? %>
-        <%= link_to edit_challenge_path(@challenge), class: 'btn btn-success' do %>
+        <%= link_to edit_challenge_path(@challenge), class: 'btn btn-primary btn-lg btn-block' do %>
           <i class="fas fa-check-circle"></i> Enclose
         <% end %>
-        <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %>
-          <i class="fas fa-trash-alt"></i> Delete
+       <!-- <%= link_to challenge_path(@challenge), class: 'btn btn-danger', method: :delete do %><i class="fas fa-trash-alt"></i>-->
         <% end %>
       <% elsif @challenge.ongoing? %>
         <%= link_to "Participate", challenge_participations_path(@challenge), class: 'btn btn-success', method: :post %>
@@ -34,4 +34,3 @@
 <div id="share-buttons"> <!-- Facebook --> <a href="https://www.facebook.com/sharer.php?u=https://www.trashtag.pro/challenges/<% @challenge.id %>" target="_blank"><img src="https://4.bp.blogspot.com/-raFYZvIFUV0/UwNI2ek6i3I/AAAAAAAAGSA/zs-kwq0q58E/s1600/facebook.png" alt="Facebook" /></a> <!-- Twitter --> <a href="https://twitter.com/share?url=https://www.trashtag.pro/challenges/<% @challenge.id %>&text=Simple Share Buttons" target="_blank"><img src="https://4.bp.blogspot.com/--ISQEurz3aE/UwNI4hDaQMI/AAAAAAAAGS4/ZAgmPiM9Xpk/s1600/twitter.png" alt="Twitter" /></a> <!-- LinkedIn --> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.trashtag.pro/challenges/<% @challenge.id %>" target="_blank"><img src="https://2.bp.blogspot.com/-3_cATk7Wlho/UwNI3eoTTLI/AAAAAAAAGSQ/Y8cpq6S-SeQ/s1600/linkedin.png" alt="LinkedIn" /></a> <!-- Pinterest --> <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','https://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="https://2.bp.blogspot.com/-3CfsOmDx-Dg/UwNI3kMVjgI/AAAAAAAAGSU/OSixn3lcjX4/s1600/pinterest.png" alt="Pinterest" /></a> <!-- Email --> <a href="mailto:?Subject=FrinMash&Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://www.trashtag.pro/challenges/<% @challenge.id %>"><img src="https://4.bp.blogspot.com/-njgKtNLrPqI/UwNI2o-9WfI/AAAAAAAAGR4/f8da1gBgyLs/s1600/email.png" alt="Email" /></a> </div>
 
 </div>
-
