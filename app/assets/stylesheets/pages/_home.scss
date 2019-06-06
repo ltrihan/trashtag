@@ -75,7 +75,7 @@ body{
 
 .arrow {
   text-align: center;
-  margin: 8% 0 13% 0;
+  margin: 6% 0 28% 0;
 }
 
 .bounce {
@@ -85,12 +85,9 @@ body{
 }
 
 
-.arrow_bounce {
-  position: absolute;
-  bottom: 15%;
-  left: 47%;
+.fa-arrow-down {
+  margin-left: 15px;
 }
-
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
