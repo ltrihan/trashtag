@@ -13,6 +13,9 @@ class Challenge < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   mount_uploader :photo_after, PhotoUploader
 
+  validates :photo, presence: true
+  # validates :photo_after, presence: true
+
   geocoded_by :place
   after_validation :geocode
 
