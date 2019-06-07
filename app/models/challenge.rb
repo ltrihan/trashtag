@@ -4,6 +4,7 @@ class Challenge < ApplicationRecord
   belongs_to :user
   has_many :participations, dependent: :destroy
   has_many :users, through: :participations
+  validates :date, presence: true
 
   # validates :title, :place, :date, presence: true
 
